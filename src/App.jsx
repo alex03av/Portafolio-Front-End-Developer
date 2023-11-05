@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import "./App.css";
-import "./assets/css/plugins/fontawesome.css";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./assets/css/theme.css";
@@ -40,11 +39,11 @@ import Speed from "./assets/img/speed.svg";
 import InnerBg from "./assets/img/inner-bg1.svg";
 import MSJ from "./assets/img/mensaje.gif";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/css/plugins/stellarnav.css";
 import "animate.css";
 
 import "./assets/css/typography.css";
 import "./assets/css/button.css";
+import "./assets/css/stellarnav.css";
 
 import {
   FaAngleUp,
@@ -58,6 +57,7 @@ import {
   FaPhone,
   FaEnvelope,
   FaInstagram,
+  FaOutdent,
 } from "react-icons/fa";
 function ContactForm() {
   const [state, handleSubmit] = useForm("mdorjeqg");
@@ -149,8 +149,9 @@ function App() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClickMoble = () => {
+  const handleClickMoble = (e) => {
     setIsOpen(!isOpen);
+    e.preventDefault();
   };
   return (
     <>
@@ -189,12 +190,15 @@ function App() {
               <div className="col-6 text-center align-self-center">
                 <div className="main-menu">
                   <div
-                    className={`stellarnav ${isMobile ? "mobile" : "desktop"}`}
+                    className={`stellarnav light right ${
+                      isMobile ? "mobile" : "desktop"
+                    }`}
                   >
                     <a
                       href="#"
                       className="menu-toggle"
                       onClick={handleClickMoble}
+                      aria-label="boton"
                     >
                       <span className="bars">
                         <span />
@@ -208,6 +212,15 @@ function App() {
                         display: isOpen || !isMobile ? "block" : "none",
                       }}
                     >
+                      <li
+                        className="cerrar"
+                        onClick={handleClickMoble}
+                        style={{
+                          display: !isMobile ? "none" : "block",
+                        }}
+                      >
+                        <FaOutdent />
+                      </li>
                       <li className={activeLink === "inicio" ? "current" : ""}>
                         <a
                           href="#inicio"
@@ -411,7 +424,7 @@ function App() {
                 <img
                   className="  animate__animated  animate__pulse"
                   src={ALEX}
-                  alt=""
+                  alt="ALex Arauo"
                 />
                 <h1 className="wlc-filltext">Programacion</h1>
               </div>
@@ -435,12 +448,10 @@ function App() {
                     TRANSFORMANDO DESAFÍOS EN <span>TRIUNFOS</span>
                   </h2>
                   <p>
-                    Hola, Soy <small>Alexander Araujo</small> , aunque la
-                    mayoría de las personas me conocen como{" "}
-                    <small>Alex. </small>
-                    Me dedico profesionalmente al desarrollo web frontend,
-                    transformando ideas en soluciones digitales efectivas.
-                    ¡Bienvenido a mi mundo! 😊
+                    Hola, Soy Alexander Araujo, aunque la mayoría de las
+                    personas me conocen como Alex. Me dedico profesionalmente al
+                    desarrollo web frontend, transformando ideas en soluciones
+                    digitales efectivas. ¡Bienvenido a mi mundo! 😊
                   </p>
                   <p>
                     Como desarrollador web independiente, cada día es una nueva
@@ -507,11 +518,11 @@ function App() {
             <div className="row">
               <div className="col-sm-6 col-lg-3">
                 <div className="skill-box">
-                  <small>Cursos Realizados</small> <br />
-                  <small>2021 - 2022 (FreeCodeCamp)</small>
+                  <h3 className="smalle">Cursos Realizados</h3>
+                  <h3 className="smalle">2021 - 2022 (FreeCodeCamp)</h3>
                   <h3>Diseño web adaptable</h3>
                   <h4>Algoritmos de JavaScript y estructuras de datos</h4>
-                  <h6>Bibliotecas de desarrollo front-end</h6>
+                  <h5>Bibliotecas de desarrollo front-end</h5>
                   <p>
                     cada curso representa aproximadamente 300 horas de trabajo
                     lo que da un total de 900 horas de trabajo
@@ -520,15 +531,15 @@ function App() {
               </div>
               <div className="col-sm-6 col-lg-3">
                 <div className="skill-box">
-                  <small>
+                  <h3 className="smalle">
                     <b>Estudios Alcanzados</b>{" "}
-                  </small>
-                  <br />
-                  <small>
+                  </h3>
+
+                  <h3 className="smalle">
                     2021 - 2024 (Colegio Universitario de Administración y
                     Mercadeo)
-                  </small>
-                  <h5>Técnico Superior Universitario en Informatica</h5>
+                  </h3>
+                  <h4>Técnico Superior Universitario en Informatica</h4>
                   <p>
                     Profesional formado para analizar, diseñar, desarrollar,
                     implementar así como mantener sistemas y aplicaciones
@@ -539,9 +550,9 @@ function App() {
               </div>
               <div className="col-sm-6 col-lg-3">
                 <div className="skill-box">
-                  <small>EXPERIENCIA</small>
-                  <br />
-                  <small>2022 - Actualidad (Freelancer)</small>
+                  <h3 className="smalle">EXPERIENCIA</h3>
+
+                  <h3 className="smalle">2022 - Actualidad (Freelancer)</h3>
                   <h4>Programador Web Front-End</h4>
                   <p>
                     Como programador web front-end, desarrollo soluciones que
@@ -553,9 +564,8 @@ function App() {
               </div>
               <div className="col-sm-6 col-lg-3">
                 <div className="skill-box">
-                  <small>EXPERIENCIA</small>
-                  <br />
-                  <small>2023 - Actualidad (Freelancer)</small>
+                  <h3 className="smalle">EXPERIENCIA</h3>
+                  <h3 className="smalle">2023 - Actualidad (Freelancer)</h3>
                   <h4>Desarrollador WordPress</h4>
                   <h5>Programador WordPress Orientado a Código</h5>
                   <h6>Administrador de WordPress</h6>
@@ -926,8 +936,12 @@ function App() {
                   </a>
                 </div>
                 <div className="item" rel="noreferrer" target="_blank">
-                  <a href="portfolio.html">
-                    <img src={Web5} alt="" />
+                  <a href="#">
+                    <img
+                      src={Web5}
+                      alt="ClimbingTrainingProgram: Personalización de
+                        Entrenamiento para Clientes"
+                    />
                     <div>
                       <h5>
                         ClimbingTrainingProgram: Personalización de

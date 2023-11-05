@@ -65,3 +65,23 @@ a.cbtn.pricing-btn i {
   border-radius: 4px;
   margin-top: -15px;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0b0d0e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #ffaa05;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #eba720;
+}
