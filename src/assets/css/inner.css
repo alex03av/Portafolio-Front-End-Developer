@@ -236,7 +236,7 @@ span.single-blog-section-img-tag {
   width: 100px;
   line-height: 100px;
   text-align: center;
-  background: #ffaa05;
+  background: #b5c235;
   height: 100px;
   margin: 6px;
 }
@@ -756,7 +756,7 @@ img.memphis.memphis7 {
 }
 .contact__card__icon svg {
   font-size: 50px;
-  color: #ffc20d;
+  color: #cddc39;
 }
 .contact__card__icon i {
   color: #32383a;
@@ -775,7 +775,7 @@ img.memphis.memphis7 {
   margin-bottom: 0;
 }
 .contact__card {
-  border: 1px solid #ffc005;
+  border: 1px solid #cddc39;
   border-radius: 10px;
   transform: translateY(0);
   transition: all 0.3s;

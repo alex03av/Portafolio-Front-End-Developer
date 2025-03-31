@@ -3,12 +3,12 @@ a.cbtn {
   font-size: 14px;
   text-transform: uppercase;
   padding: 13px 25px;
-  background: #ffaa05;
+  background: #b5c235;
   border-radius: 4px;
 }
 
 a.cbtn.cbnt1 {
-  background: #ffaa05;
+  background: #b5c235;
   padding-right: 70px;
   position: relative;
   z-index: 2;
@@ -30,20 +30,20 @@ a.cbtn.cbnt1 i {
   line-height: 30px;
   font-size: 20px;
   background: #191c1f !important;
-  color: #ffaa05;
+  color: #b5c235;
   border-radius: 4px;
   margin-top: -15px;
 }
 
 a.cbtn.cbnt1:hover {
-  border-color: #ffaa05;
+  border-color: #b5c235;
   background: transparent;
   color: #ffffff;
   transition: all 0.3s;
 }
 
 a.cbtn.pricing-btn {
-  background: #ffaa05;
+  background: #b5c235;
   padding-right: 70px;
   position: relative;
   z-index: 2;
@@ -78,7 +78,7 @@ a.cbtn.pricing-btn i {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: #ffaa05;
+  background: #b5c235;
 }
 
 /* Handle on hover */

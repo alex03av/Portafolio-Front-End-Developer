@@ -45,7 +45,7 @@ INNER PAGES CSS----->
 
 .single-blog-section-description h2:hover,
 .single-blog-section-description h2 a:hover {
-  color: #ffc005;
+  color: #cddc39;
 }
 
 .single-blog-section-description {
@@ -84,11 +84,11 @@ a.blog-author img {
   top: 50%;
   margin-top: -20px;
   border-radius: 50%;
-  border: 1px solid #ffc005;
+  border: 1px solid #cddc39;
 }
 
 .single-blog-section-author li a i {
-  color: #ffc005;
+  color: #cddc39;
   padding-right: 5px;
 }
 
@@ -116,7 +116,7 @@ span.single-blog-section-img-tag {
   margin: 15px 0;
 }
 .single-blog-section:hover span.single-blog-section-img-tag {
-  background: #ffc005;
+  background: #cddc39;
 }
 
 .blog-page-social li {
@@ -153,14 +153,14 @@ span.single-blog-section-img-tag {
   padding: 16px;
   line-height: 1.25;
   background-color: #fff;
-  border: 1px solid #ffc005;
-  color: #ffc005;
+  border: 1px solid #cddc39;
+  color: #cddc39;
   margin-right: 10px;
   border-radius: 5px;
 }
 
 .cpagination .page-link:hover {
-  background: #ffc005;
+  background: #cddc39;
   color: #fff;
 }
 
@@ -176,7 +176,7 @@ span.single-blog-section-img-tag {
 }
 
 .blog-box span {
-  color: #ffc005;
+  color: #cddc39;
 }
 
 .blog-author-image img {
@@ -250,7 +250,7 @@ span.single-blog-section-img-tag {
   padding: 10px 0;
 }
 .blog-categores li a:hover {
-  color: #ffc005;
+  color: #cddc39;
 }
 .blog-tag li a {
   padding: 7px 13px;
@@ -266,7 +266,7 @@ span.single-blog-section-img-tag {
 }
 
 .blog-tag li a:hover {
-  background: #ffc005;
+  background: #cddc39;
   color: #fff;
 }
 
@@ -288,7 +288,7 @@ span.single-blog-section-img-tag {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #ffc005;
+  border-color: #cddc39;
 }
 
 .portfolio-bg-1 {
@@ -336,7 +336,7 @@ span.single-blog-section-img-tag {
   font-family: "Oswald", sans-serif;
 }
 .portfolio-filter li.active {
-  color: #ffc005;
+  color: #cddc39;
 }
 .portfolio-description {
   margin-bottom: 30px;
@@ -514,7 +514,7 @@ span.single-blog-section-img-tag {
 }
 
 .single_comment h4 {
-  color: #ffc005;
+  color: #cddc39;
   margin: 0;
   text-transform: uppercase;
 }
@@ -593,7 +593,7 @@ img.inner-shape3 {
 
 .single-quote {
   padding: 60px 50px;
-  background: #ffc005;
+  background: #cddc39;
 }
 
 .single-quote h6 {
@@ -648,7 +648,7 @@ img.inner-shape3 {
   content: "";
   height: 100%;
   width: 10%;
-  background: #ffc005;
+  background: #cddc39;
   z-index: 2;
   left: 0;
   top: 0;

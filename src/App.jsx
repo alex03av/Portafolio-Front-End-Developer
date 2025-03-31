@@ -10,21 +10,12 @@ import "./assets/css/responsive.css";
 import Hamburger from "./assets/img/svg/hamburger.svg";
 import Service from "./assets/img/svg/service-bg.svg";
 import AJVCODE from "./assets/img/AJVCODE.png";
-import HTML from "./assets/img/skill/html-5.webp";
-import REACT from "./assets/img/skill/react.webp";
-import NEXTJS from "./assets/img/skill/nextjs.svg";
-import GIT from "./assets/img/skill/GIT.webp";
-import SQL from "./assets/img/skill/sql.webp";
-import JS from "./assets/img/skill/js.webp";
-import CSS from "./assets/img/skill/css-3.webp";
-import Bootstrap from "./assets/img/skill/bootstrap.webp";
-import PHP from "./assets/img/skill/php.webp";
-import WP from "./assets/img/skill/WP.webp";
 import OwlCarousel from "react-owl-carousel";
 import img12 from "./assets/img/escritorio.webp";
 import User from "./assets/img/user.png";
-import Quote from "./assets/img/quote.png";
-import Web1 from "./assets/img/web/2.webp";
+import Quote from "./assets/img/quote.svg";
+import Web1 from "./assets/img/web/2.png";
+import Chollo from "./assets/img/web/chollitos.png";
 import Web2 from "./assets/img/web/4.webp";
 import Web3 from "./assets/img/web/7.webp";
 import Web4 from "./assets/img/web/5.webp";
@@ -32,15 +23,16 @@ import Web5 from "./assets/img/web/9.webp";
 import Web6 from "./assets/img/web/3.webp";
 import Web7 from "./assets/img/web/8.webp";
 import Web8 from "./assets/img/web/6.webp";
+import ProjectsComponent from "./components/project/ProjectsComponent";
 import Fronted from "./assets/img/algo.svg";
 import ALEX from "./assets/img/img-20211112-204253.webp";
-import WPImg from "./assets/img/icons8-wordpress-144.png";
+import WPImg from "./assets/img/wordpress-svgrepo-com.svg";
 import Speed from "./assets/img/speed.svg";
 import InnerBg from "./assets/img/inner-bg1.svg";
 import MSJ from "./assets/img/mensaje.gif";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
-
+import { demoProjects } from "./data/lading/landing";
 import "./assets/css/typography.css";
 import "./assets/css/button.css";
 import "./assets/css/stellarnav.css";
@@ -153,6 +145,61 @@ function App() {
     setIsOpen(!isOpen);
     e.preventDefault();
   };
+  const dominio = "https://img.shields.io/badge";
+  const tecnologias = {
+    html: "-HTML-333333?style=flat&logo=html5",
+    css: "-CSS-333333?style=flat&logo=css3",
+    javascript: "-JavaScript-333333?style=flat&logo=javascript",
+    react: "-React-333333?style=flat&logo=react",
+    nextjs: "-Next.js-333333?style=flat&logo=next.js",
+    astro: "-Astro-333333?style=flat&logo=astro",
+    wordpress: "-WordPress-333333?style=flat&logo=wordpress",
+    php: "-PHP-333333?style=flat&logo=php",
+    sql: "MySQL-333333?logo=mysql&logoColor=fff&logo=sql",
+    bootstrap: "-Bootstrap-333333?style=flat&logo=bootstrap",
+    sass: "-SASS-333333?style=flat&logo=sass",
+    typescript: "-TypeScript-333333?style=flat&logo=typescript",
+    redux: "-Redux-333333?style=flat&logo=redux",
+    jquery: "-jQuery-333333?style=flat&logo=jquery",
+    node: "-Node.js-333333?style=flat&logo=node.js",
+    express: "-Express-333333?style=flat&logo=express",
+    mongodb: "-MongoDB-333333?style=flat&logo=mongodb",
+    docker: "-Docker-333333?logo=docker&logoColor=fff&=docker",
+    udemy: "-Udemy-131617?style=flat&logo=udemy",
+    freecodecamp: "-FreeCodeCamp-131617?style=flat&logo=freecodecamp",
+    git: "-Git-333333?logo=git&logoColor=fff=git",
+    gitHub: "-GitHub-333333?logo=github&logoColor=fff",
+  };
+
+  const TecnologiaCarousel = () => {
+    return (
+      <OwlCarousel
+        className="owl-theme"
+        loop
+        nav
+        autoplay
+        dots={false}
+        items={10}
+        responsive={{
+          0: {
+            items: 3,
+          },
+          600: {
+            items: 6,
+          },
+          1000: {
+            items: 9,
+          },
+        }}
+      >
+        {Object.keys(tecnologias).map((key) => (
+          <div className="item" key={key}>
+            <img src={`${dominio}/${tecnologias[key]}`} alt={key} />
+          </div>
+        ))}
+      </OwlCarousel>
+    );
+  };
   return (
     <>
       {/** <div className="preloader">
@@ -187,7 +234,7 @@ function App() {
                   <img src={AJVCODE} alt="" height={0.4} />
                 </a>
               </div>
-              <div className="col-6 text-center align-self-center">
+              <div className="col-xxl-6 col-lg-8 text-center align-self-center">
                 <div className="main-menu">
                   <div
                     className={`stellarnav light right ${
@@ -268,7 +315,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="d-none d-lg-block col-lg-3 align-self-center text-right">
+              <div className="d-none d-lg-block col-xxl-3 col-lg-auto col-auto align-self-center text-right">
                 <div className="search-area">
                   <div className="grid-menu" id="grid-side">
                     <img
@@ -489,98 +536,396 @@ function App() {
             </div>
           </div>
         </div>
-        {/*:::::ABOUT AREA END :::::::*/}
         {/*:::::SKILL AREA START :::::::*/}
-        <div className="skill-area section-padding" id="portfolio">
+        <div className="skill-area" id="portfolio">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 align-self-center">
                 <div className="heading white">
                   <strong className="filltext">Mi carrera</strong>
-                  <small>MI EXPERIENCIA</small>
-                  <h2>
-                    EXPERIENCIA, <br /> Estudios Y <span>HABILIDADES</span>
-                  </h2>
+                  <small>MIS ESTUDIOS</small>
+                  <h2>ESTUDIOS ALCANZADOS</h2>
                 </div>
               </div>
               <div className="col-lg-6 align-self-center">
                 <div className="info-content">
                   <p>
-                    Mi trayectoria: un mosaico de desafíos. Educación y
-                    experiencia entrelazadas, fortaleciendo habilidades. Pasión
-                    y dedicación como motor de éxito. Siempre aprendiendo,
-                    siempre creciendo.{" "}
+                    Mi trayectoria profesional es un recorrido de desafíos
+                    superados y habilidades fortalecidas.
                   </p>
                 </div>
               </div>
             </div>
             <div className="space-60" />
             <div className="row">
-              <div className="col-sm-6 col-lg-3">
+              {/* Técnico Superior Universitario */}
+              <div className="col-sm-12 col-lg-6 mb-4">
                 <div className="skill-box">
-                  <h3 className="smalle">Cursos Realizados</h3>
-                  <h3 className="smalle">2021 - 2022 (FreeCodeCamp)</h3>
-                  <h3>Diseño web adaptable</h3>
-                  <h4>Algoritmos de JavaScript y estructuras de datos</h4>
-                  <h5>Bibliotecas de desarrollo front-end</h5>
-                  <p>
-                    cada curso representa aproximadamente 300 horas de trabajo
-                    lo que da un total de 900 horas de trabajo
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-6 col-lg-3">
-                <div className="skill-box">
-                  <h3 className="smalle">
-                    <b>Estudios Alcanzados</b>{" "}
-                  </h3>
-
                   <h3 className="smalle">
                     2021 - 2024 (Colegio Universitario de Administración y
                     Mercadeo)
                   </h3>
-                  <h4>Técnico Superior Universitario en Informatica</h4>
+                  <h4>Técnico Superior Universitario en Informática</h4>
                   <p>
-                    Profesional formado para analizar, diseñar, desarrollar,
-                    implementar así como mantener sistemas y aplicaciones
-                    informáticas. Esto incluye el manejo de software, hardware,
-                    redes y sistemas de información.
+                    Profesional capacitado en el análisis, diseño, desarrollo y
+                    mantenimiento de sistemas y aplicaciones informáticas.
+                    Experiencia en manejo de software, hardware, redes y
+                    sistemas de información para resolver problemas tecnológicos
+                    complejos.
                   </p>
                 </div>
               </div>
-              <div className="col-sm-6 col-lg-3">
-                <div className="skill-box">
-                  <h3 className="smalle">EXPERIENCIA</h3>
 
-                  <h3 className="smalle">2022 - Actualidad (Freelancer)</h3>
-                  <h4>Programador Web Front-End</h4>
+              {/* Diseño web adaptable */}
+              <div className="col-sm-12 col-lg-6 mb-4">
+                <div className="skill-box">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h3 className="smalle">2021 - 2022</h3>
+                    <img
+                      src={`${dominio}/${tecnologias.freecodecamp}`}
+                      alt="FreeCodeCamp"
+                    />
+                  </div>
+                  <h3>Diseño web adaptable</h3>
                   <p>
-                    Como programador web front-end, desarrollo soluciones que
-                    mejoran la eficiencia y productividad. Cada proyecto es una
-                    oportunidad para superar las expectativas del cliente con un
-                    producto único y personalizado.
+                    Formación en los fundamentos de diseño web responsivo,
+                    incluyendo HTML, CSS y Flexbox, con enfoque en la creación
+                    de sitios optimizados para diferentes dispositivos y tamaños
+                    de pantalla.
+                  </p>
+                  <div
+                    className="mt-2"
+                    style={{ display: "flex", flexWrap: "wrap", gap: 10 }}
+                  >
+                    <img src={`${dominio}/${tecnologias.html}`} alt="HTML" />
+                    <img src={`${dominio}/${tecnologias.css}`} alt="CSS" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Algoritmos y estructuras de datos */}
+              <div className="col-sm-12 col-lg-6 mb-4">
+                <div className="skill-box">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h3 className="smalle">2021 - 2022</h3>
+                    <img
+                      src={`${dominio}/${tecnologias.freecodecamp}`}
+                      alt="FreeCodeCamp"
+                    />
+                  </div>
+                  <h4>Algoritmos de JavaScript y estructuras de datos</h4>
+                  <p>
+                    Capacitación avanzada en algoritmos y estructuras de datos
+                    usando JavaScript, con prácticas en resolución de problemas
+                    y optimización de código para mejorar la lógica de
+                    programación.
+                  </p>
+                  <div
+                    className="mt-2"
+                    style={{ display: "flex", flexWrap: "wrap", gap: 10 }}
+                  >
+                    <img src={`${dominio}/${tecnologias.html}`} alt="HTML" />
+                    <img src={`${dominio}/${tecnologias.css}`} alt="CSS" />
+                    <img
+                      src={`${dominio}/${tecnologias.javascript}`}
+                      alt="JavaScript"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Bibliotecas de desarrollo front-end */}
+              <div className="col-sm-12 col-lg-6 mb-4">
+                <div className="skill-box">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h3 className="smalle">2021 - 2022</h3>
+                    <img
+                      src={`${dominio}/${tecnologias.freecodecamp}`}
+                      alt="FreeCodeCamp"
+                    />
+                  </div>
+                  <h5>Bibliotecas de desarrollo front-end</h5>
+                  <p>
+                    Especialización en bibliotecas populares como React y
+                    Bootstrap para el desarrollo de interfaces de usuario
+                    interactivas y dinámicas, con un enfoque en la creación de
+                    componentes reutilizables y eficientes.
+                  </p>
+                  <div
+                    className="mt-2"
+                    style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
+                  >
+                    <img src={`${dominio}/${tecnologias.html}`} alt="HTML" />
+                    <img src={`${dominio}/${tecnologias.css}`} alt="CSS" />
+                    <img
+                      src={`${dominio}/${tecnologias.javascript}`}
+                      alt="JavaScript"
+                    />
+                    <img src={`${dominio}/${tecnologias.react}`} alt="React" />
+                    <img src={`${dominio}/${tecnologias.sass}`} alt="SASS" />
+                    <img
+                      src={`${dominio}/${tecnologias.bootstrap}`}
+                      alt="Bootstrap"
+                    />
+                    <img src={`${dominio}/${tecnologias.redux}`} alt="Redux" />
+                    <img
+                      src={`${dominio}/${tecnologias.jquery}`}
+                      alt="jQuery"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Master en APIs RESTful */}
+              <div className="col-sm-12 col-lg-6 mb-4">
+                <div className="skill-box">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h3 className="smalle">2024</h3>
+                    <img src={`${dominio}/${tecnologias.udemy}`} alt="Udemy" />
+                  </div>
+                  <h4>Master en APIs RESTful con NodeJS</h4>
+                  <p>
+                    Formación avanzada en el desarrollo de APIs RESTful
+                    utilizando Node.js, Express y bases de datos como MongoDB.
+                    Incluye la implementación de buenas prácticas en seguridad y
+                    manejo eficiente de datos.
+                  </p>
+                  <div
+                    className="mt-2"
+                    style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
+                  >
+                    <img
+                      src={`${dominio}/${tecnologias.javascript}`}
+                      alt="JavaScript"
+                    />
+                    <img src={`${dominio}/${tecnologias.node}`} alt="Node.js" />
+                    <img
+                      src={`${dominio}/${tecnologias.express}`}
+                      alt="Express"
+                    />
+                    <img
+                      src={`${dominio}/${tecnologias.mongodb}`}
+                      alt="MongoDB"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*:::::SKILL AREA END :::::::*/}
+        {/*:::::ABOUT AREA END :::::::*/}
+        {/*:::::SKILL AREA START :::::::*/}
+        <div className="space-50" />
+        <div className="skill-area " id="portfolio">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 align-self-center">
+                <div className="heading white">
+                  <strong className="filltext">Mi carrera</strong>
+                  <small>MI EXPERIENCIA</small> <h2>EXPERIENCIA LABORAL</h2>
+                </div>
+              </div>
+              <div className="col-lg-6 align-self-center">
+                <div className="info-content">
+                  <p>
+                    Mi trayectoria profesional es un recorrido de desafíos
+                    superados y habilidades fortalecidas.
                   </p>
                 </div>
               </div>
-              <div className="col-sm-6 col-lg-3">
-                <div className="skill-box">
-                  <h3 className="smalle">EXPERIENCIA</h3>
-                  <h3 className="smalle">2023 - Actualidad (Freelancer)</h3>
-                  <h4>Desarrollador WordPress</h4>
-                  <h5>Programador WordPress Orientado a Código</h5>
-                  <h6>Administrador de WordPress</h6>
+            </div>
+            <div className="space-60" />
+
+            <div className="row ">
+              <div className="col-sm-12 col-lg-6 mb-4">
+                <div className="skill-box ">
+                  <h3 className="smalle filltext">2022 - 2024</h3>{" "}
+                  <h4>Frontend Developer - Freelancer</h4>
                   <p>
-                    Me especialice en el desarrollo, programación y
-                    administración de WordPress, creando soluciones eficientes y
-                    personalizadas para cada cliente.
+                    Desarrollador Front-End independiente, ofreciendo soluciones
+                    personalizadas a través de plataformas freelance. He
+                    trabajado con una amplia variedad de clientes, encargándome
+                    del mantenimiento de sitios web y del desarrollo de
+                    interfaces modernas, funcionales y adaptadas a sus
+                    necesidades específicas.
                   </p>
+                  <div
+                    style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
+                  >
+                    <img src={`${dominio}/${tecnologias.html}`} alt="HTML" />
+                    <img src={`${dominio}/${tecnologias.css}`} alt="CSS" />
+                    <img
+                      src={`${dominio}/${tecnologias.javascript}`}
+                      alt="JavaScript"
+                    />
+                    <img src={`${dominio}/${tecnologias.react}`} alt="React" />
+                    <img
+                      src={`${dominio}/${tecnologias.nextjs}`}
+                      alt="Next.js"
+                    />
+                    <img src={`${dominio}/${tecnologias.astro}`} alt="Astro" />
+
+                    <img src={`${dominio}/${tecnologias.sass}`} alt="SASS" />
+                    <img
+                      src={`${dominio}/${tecnologias.bootstrap}`}
+                      alt="Bootstrap"
+                    />
+                    <img
+                      src={`${dominio}/${tecnologias.typescript}`}
+                      alt="TypeScript"
+                    />
+                    <img src={`${dominio}/${tecnologias.redux}`} alt="Redux" />
+                    <img
+                      src={`${dominio}/${tecnologias.jquery}`}
+                      alt="jQuery"
+                    />
+                    <img src={`${dominio}/${tecnologias.git}`} alt="Git" />
+                    <img
+                      src={`${dominio}/${tecnologias.gitHub}`}
+                      alt="GitHub"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-12 col-lg-6 mb-4">
+                <div className="skill-box">
+                  <h3 className="smalle">2023 - 2024</h3>
+                  <h4>WordPress Developer - Freelancer</h4>{" "}
+                  <p>
+                    Especialista en desarrollo a medida para WordPress. Diseño y
+                    programo funcionalidades personalizadas tanto en Front-End
+                    como en Back-End, asegurando una experiencia optimizada para
+                    los usuarios y cumpliendo con los objetivos de los proyectos
+                    solicitados por los clientes
+                  </p>
+                  <div
+                    style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
+                  >
+                    <img src={`${dominio}/${tecnologias.html}`} alt="HTML" />
+                    <img src={`${dominio}/${tecnologias.css}`} alt="CSS" />
+                    <img
+                      src={`${dominio}/${tecnologias.javascript}`}
+                      alt="JavaScript"
+                    />
+                    <img src={`${dominio}/${tecnologias.react}`} alt="React" />
+
+                    <img
+                      src={`${dominio}/${tecnologias.wordpress}`}
+                      alt="WordPress"
+                    />
+                    <img src={`${dominio}/${tecnologias.php}`} alt="PHP" />
+                    <img src={`${dominio}/${tecnologias.sql}`} alt="SQL" />
+
+                    <img
+                      src={`${dominio}/${tecnologias.bootstrap}`}
+                      alt="Bootstrap"
+                    />
+
+                    <img
+                      src={`${dominio}/${tecnologias.jquery}`}
+                      alt="jQuery"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-12 col-lg-6 mb-4">
+                <div className="skill-box">
+                  <h3 className="smalle">06/02/2023 - 05/05/2024 </h3>{" "}
+                  <h4>WordPress and Front-End Developer - Gotta Be Public</h4>
+                  <p>
+                    Desarrollador WordPress y Front-End para esta agencia
+                    digital. Participé en la creación y mantenimiento de sitios
+                    web, resolviendo problemas relacionados con WordPress y
+                    desarrollo Front-End, con un enfoque en soluciones
+                    eficientes y creativas.
+                  </p>
+                  <div
+                    style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
+                  >
+                    <img src={`${dominio}/${tecnologias.html}`} alt="HTML" />
+                    <img src={`${dominio}/${tecnologias.css}`} alt="CSS" />
+                    <img
+                      src={`${dominio}/${tecnologias.javascript}`}
+                      alt="JavaScript"
+                    />
+                    <img src={`${dominio}/${tecnologias.react}`} alt="React" />
+                    <img
+                      src={`${dominio}/${tecnologias.nextjs}`}
+                      alt="Next.js"
+                    />
+                    <img
+                      src={`${dominio}/${tecnologias.wordpress}`}
+                      alt="WordPress"
+                    />
+                    <img src={`${dominio}/${tecnologias.php}`} alt="PHP" />
+                    <img src={`${dominio}/${tecnologias.sql}`} alt="SQL" />
+                    <img
+                      src={`${dominio}/${tecnologias.bootstrap}`}
+                      alt="Bootstrap"
+                    />
+                    <img
+                      src={`${dominio}/${tecnologias.jquery}`}
+                      alt="jQuery"
+                    />{" "}
+                    <img src={`${dominio}/${tecnologias.git}`} alt="Git" />
+                    <img
+                      src={`${dominio}/${tecnologias.gitHub}`}
+                      alt="GitHub"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-12 col-lg-6 mb-4">
+                <div className="skill-box">
+                  <h3 className="smalle">01-07-24 | Actualidad</h3>
+                  <h4>Frontend Developer - Getalink.com</h4>{" "}
+                  <p>
+                    Desarrollador Front-End especializado en UI/UX Linkbuilding
+                    Platform. Trabajo en el desarrollo Front-End con React y
+                    Next.js, utilizando SASS y Bootstrap, implementando buenas
+                    prácticas bajo la arquitectura hexagonal.
+                  </p>
+                  <div
+                    style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
+                  >
+                    <img src={`${dominio}/${tecnologias.html}`} alt="HTML" />
+                    <img src={`${dominio}/${tecnologias.css}`} alt="CSS" />
+                    <img
+                      src={`${dominio}/${tecnologias.javascript}`}
+                      alt="JavaScript"
+                    />
+                    <img src={`${dominio}/${tecnologias.react}`} alt="React" />
+                    <img
+                      src={`${dominio}/${tecnologias.nextjs}`}
+                      alt="Next.js"
+                    />
+                    <img src={`${dominio}/${tecnologias.sass}`} alt="SASS" />
+                    <img
+                      src={`${dominio}/${tecnologias.bootstrap}`}
+                      alt="Bootstrap"
+                    />
+                    <img
+                      src={`${dominio}/${tecnologias.typescript}`}
+                      alt="TypeScript"
+                    />
+                    <img
+                      src={`${dominio}/${tecnologias.docker}`}
+                      alt="Docker"
+                    />{" "}
+                    <img src={`${dominio}/${tecnologias.git}`} alt="Git" />
+                    <img
+                      src={`${dominio}/${tecnologias.gitHub}`}
+                      alt="GitHub"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="space-100" />
           {/* Start Technical Skills Section */}
-          <div className="skill__circles">
+          {/*   <div className="skill__circles">
             <div className="container">
               <div className="row">
                 <OwlCarousel
@@ -685,8 +1030,7 @@ function App() {
                 </OwlCarousel>
               </div>
             </div>
-          </div>
-          <div className="space-100" />
+          </div> */}
         </div>
         {/*:::::SKILL AREA END :::::::*/}
         {/*:::::SERVICE AREA START :::::::*/}
@@ -722,7 +1066,7 @@ function App() {
                     <img src={Fronted} alt="" />
                   </div>
                   <div className="service-text">
-                    <h4>Desarrollo Front-End</h4>
+                    <h4>Front-End Development</h4>
                     <p>
                       Mi trabajo es dar vida a las ideas en el mundo digital.
                       Utilizo una combinación de creatividad y habilidades
@@ -775,7 +1119,7 @@ function App() {
                     <img src={WPImg} alt="" />
                   </div>
                   <div className="service-text">
-                    <h4>Desarrollo de WordPress</h4>
+                    <h4>WordPress Development</h4>
                     <p>
                       Como Conocedor en WordPress, ofrezco una gama de servicios
                       que incluyen el desarrollo de plugins, la creación de
@@ -801,223 +1145,13 @@ function App() {
         </div>
         {/*:::::SERVICE AREA END :::::::*/}
         {/*:::::PROJECT AREA START :::::::*/}
-        <div className="project-area section-padding" id="Proyectos">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-5 align-self-center">
-                <div className="heading white">
-                  <strong className="filltext">Trabajos</strong>
-                  <small>Últimos trabajos</small>
-                  <h2>
-                    Explora mis proyectos mas <span>recientes.</span>
-                  </h2>
-                </div>
-              </div>
-              <div className="col-lg-7 align-self-center">
-                <div className="info-content">
-                  <p>
-                    En el dinámico mundo del desarrollo frontend, cada proyecto
-                    es un nuevo desafío. Aquí puedes encontrar información sobre
-                    mi último proyecto en proceso, una muestra de mi enfoque
-                    práctico y orientado a resultados. Si estás interesado en
-                    conocer más detalles o discutir posibilidades de
-                    colaboración, no dudes en ponerte en contacto conmigo.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="space-60" />
-            <div className="row">
-              <OwlCarousel
-                id="da-thumbs"
-                dots={false}
-                className="da-thumbs portfolio-carousel owl-theme"
-                loop
-                margin={10}
-                responsive={{
-                  0: {
-                    items: 1,
-                  },
-                  600: {
-                    items: 2,
-                  },
-                  1000: {
-                    items: 4,
-                  },
-                }}
-                items={3}
-              >
-                <div className="item">
-                  <a
-                    href="https://gottabepublic.com/"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <img src={Web1} alt="" />
-                    <div>
-                      <h5>Gotta Be Public</h5>
-                      <h6>Landing Pages + Blog </h6>
-                      <p>
-                        Creé una página de Landin Pages y un blog para ‘Gotta Be
-                        Public’, utilizando tecnologías modernas como React,
-                        Next.js y WordPress.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div className="item">
-                  <a
-                    href="https://infomigracion.com/"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      src={Web2}
-                      alt="En InfoMigracion le ayudamos en su proceso migratorio a Estados Unidos, Chile, España y Canadá. No lo olvide: ¡Tú eres la razón por la que estamos aquí!"
-                    />
-                    <div>
-                      <h5>InfoMigracion</h5>
-                      <h6>
-                        Desarrollo de Theme y <br /> Shortcodes, Mejora de
-                        Rendimiento y Mantenimiento
-                      </h6>
-                      <p>
-                        En InfoMigracion, desarrollé un tema personalizado y
-                        shortcodes para WordPress, y mejoré el rendimiento del
-                        sitio, utilizando tecnologías modernas como JavaScript,
-                        PHP, Bootstrap, CSS.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div className="item">
-                  <a
-                    href="https://angulo44.es/"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <img src={Web3} alt="Tienda De Muebles" />
-                    <div>
-                      <h5>
-                        Angulo44: <br /> E-commerce
-                      </h5>
-                      <h6>
-                        Personalización de la Plantilla Flatsome con UX Builder
-                        y CSS
-                      </h6>
-                      <p>
-                        Angulo44 es un proyecto de e-commerce en el que
-                        personalicé la plantilla Flatsome utilizando UX Builder
-                        y CSS, creando una experiencia de usuario única y
-                        eficiente.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div className="item">
-                  <a
-                    href="https://www.pegatinas-dgt.com/es/comprar-distintivo-ambiental/0000HLX"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <img src={Web4} alt="" />
-                    <div>
-                      <h5>
-                        Pegatinas DGT: Soluciones Ambientales y de Emergencia
-                        para Vehículos
-                      </h5>
-                      <h6>Desarrollo de Plugin Shortcode con PHP, JS y CSS</h6>
-                      <p>
-                        <b> Pegatinas DGT </b> es un proyecto que ofrece
-                        soluciones para vehículos. Desarrollé un plugin
-                        shortcode y consumí una API utilizando PHP, JS y CSS.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div className="item" rel="noreferrer" target="_blank">
-                  <a href="#">
-                    <img
-                      src={Web5}
-                      alt="ClimbingTrainingProgram: Personalización de
-                        Entrenamiento para Clientes"
-                    />
-                    <div>
-                      <h5>
-                        ClimbingTrainingProgram: Personalización de
-                        Entrenamiento para Clientes
-                      </h5>
-                      <h6>Desarrollo de Shortcode para Filtrado de Rangos</h6>
-                      <p>
-                        Proyecto que realicé para un cliente. Desarrollé un
-                        shortcode que permite a los usuarios filtrar por rango
-                        de bouldering (V0 a V17) y por rango de lead climb (5a a
-                        9a). Esta funcionalidad proporciona una experiencia de
-                        usuario personalizada y eficiente.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div className="item" rel="noreferrer" target="_blank">
-                  <a href="https://alex03av.github.io/react-marvel-api/characters">
-                    <img
-                      src={Web6}
-                      alt="Proyecto Personal en React con Consumo de API"
-                    />
-                    <div>
-                      <h5>React-Marvel-API: Explorando el Universo Marvel</h5>
-                      <h6>Proyecto Personal en React con Consumo de API</h6>
-                      <p>
-                        React-Marvel-API es un proyecto personal de práctica en
-                        React. Consumí la API oficial de Marvel para mostrar
-                        personajes, cómics, series, creadores, eventos y
-                        historias. Este proyecto está alojado en GitHub y
-                        destaca por su interactividad y uso eficiente de la API.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div className="item" rel="noreferrer" target="_blank">
-                  <a href="#">
-                    <img src={Web7} alt="" />
-                    <div>
-                      <h5>Clon de Agency-Aurora: Réplica con Precisión</h5>
-                      <h6>Desarrollo Web con HTML, CSS y JS</h6>
-                      <p>
-                        Clon de Agency-Aurora es un proyecto en el que recreé la
-                        web de Agency-Aurora utilizando HTML, CSS y JavaScript.
-                        Este proyecto destaca por su precisión y la habilidad
-                        técnica requerida para replicar el diseño y la
-                        funcionalidad del sitio original.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div className="item" rel="noreferrer" target="_blank">
-                  <a href="https://alex03av.github.io/Unit-Converter-react/Long">
-                    <img
-                      src={Web8}
-                      alt="Conversor Universal: Herramienta de Conversión en React"
-                    />
-                    <div>
-                      <h5>
-                        Conversor Universal: Herramienta de Conversión en React
-                      </h5>
-                      <h6>
-                        Proyecto Personal de Aplicación Web de Conversiones
-                      </h6>
-                      <p>
-                        Conversor Universal es un proyecto personal en el que
-                        desarrollé una aplicación web de conversiones utilizando
-                        React. Esta aplicación permite convertir unidades de
-                        longitud, temperatura, área, peso y tiempo. Destaca por
-                        su utilidad y la eficiencia de su interfaz de usuario.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </OwlCarousel>
-            </div>
+        <div className="project-area " id="Proyectos">
+          <div>
+            <ProjectsComponent
+              title="Proyectos"
+              subtitle="Explora una selección de trabajos y colaboraciones en las que he tenido el placer de participar o liderar."
+              projects={demoProjects}
+            />
           </div>
         </div>
         {/*:::::PROJECT AREA END :::::::*/}
@@ -1149,8 +1283,8 @@ function App() {
                   <h4>TELÉFONO</h4>
                   <ul>
                     <li>
-                      <a href=" https://api.whatsapp.com/send?phone=584124894488">
-                        +58 4124894488
+                      <a href=" https://api.whatsapp.com/send?phone=584124500727">
+                        +58 4124500727
                       </a>
                     </li>
                   </ul>
@@ -1209,8 +1343,8 @@ function App() {
                 <div className="space-40" />
                 <div className="copyright">
                   <p>
-                    Copyright © 2024 by <span>AJAVCODE Dev: Alex-Araujo </span>{" "}
-                    all right reserved
+                    Copyright © {new Date().getFullYear()} by{" "}
+                    <span>AJAVCODE Dev: Alex-Araujo </span> all right reserved
                   </p>
                 </div>
               </div>
@@ -1224,6 +1358,9 @@ function App() {
           <div className="joinchat__button">
             <div className="joinchat__button__open" />
           </div>
+        </div>{" "}
+        <div className="container">
+          <TecnologiaCarousel />
         </div>
         {/*:::::FOOTER AREA END :::::::*/}
       </div>{" "}
