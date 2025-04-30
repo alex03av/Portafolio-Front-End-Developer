@@ -26,7 +26,6 @@ import Web8 from "./assets/img/web/6.webp";
 import ProjectsComponent from "./components/project/ProjectsComponent";
 import Fronted from "./assets/img/algo.svg";
 import ALEX from "./assets/img/img-20211112-204253.webp";
-import ALEXyo from "./assets/img/yo.png";
 import WPImg from "./assets/img/wordpress-svgrepo-com.svg";
 import Speed from "./assets/img/speed.svg";
 import InnerBg from "./assets/img/inner-bg1.svg";
@@ -471,7 +470,7 @@ function App() {
               <div className="wlc-author-1">
                 <img
                   className="  animate__animated  animate__pulse"
-                  src={ALEXyo}
+                  src={ALEX}
                   alt="ALex Arauo"
                 />
                 <h1 className="wlc-filltext">Programacion</h1>
@@ -1040,21 +1039,21 @@ function App() {
             <div className="row">
               <div className="col-lg-5 align-self-center">
                 <div className="heading white">
-                  <strong className="filltext">Mis Servicios</strong>
-                  <small>¿QUÉ PUEDO HACER?</small>
+                  <strong className="filltext">Mi Servicios</strong>
+                  <small>¿QUE PUEDO HACER?</small>
                   <h2>
-                    SERVICIOS Y <span>SOLUCIONES</span>
+                    SERVICIOS Y <span>SOLUCIONEs</span>
                   </h2>
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
                 <div className="info-content">
                   <p>
-                    Como desarrollador frontend con experiencia, me especializo
-                    en crear soluciones digitales eficientes y escalables. Mi
-                    enfoque se centra en la excelencia, asegurando interfaces
-                    optimizadas, funcionales y atractivas que ofrecen
-                    experiencias de usuario de alto nivel.
+                    Como desarrollador frontend apasionado, me enorgullece
+                    ofrecer soluciones innovadoras y eficientes en la era
+                    digital actual. Superando obstáculos y errores con
+                    diligencia y profesionalismo, mi objetivo es proporcionar un
+                    servicio excepcional que exceda las expectativas.
                   </p>
                 </div>
               </div>
@@ -1067,13 +1066,15 @@ function App() {
                     <img src={Fronted} alt="" />
                   </div>
                   <div className="service-text">
-                    <h4>Desarrollo Front-End</h4>
+                    <h4>Front-End Development</h4>
                     <p>
-                      Diseño y desarrollo interfaces modernas y eficientes con
-                      tecnologías como React y Next.js. Desde la maquetación
-                      inicial hasta la implementación de patrones avanzados,
-                      garantizo experiencias interactivas, accesibles y
-                      visualmente atractivas.
+                      Mi trabajo es dar vida a las ideas en el mundo digital.
+                      Utilizo una combinación de creatividad y habilidades
+                      técnicas para crear experiencias de usuario atractivas y
+                      funcionales. Desde la maquetación inicial hasta el diseño
+                      responsive, me esfuerzo por garantizar que cada elemento
+                      del sitio web sea eficiente, estéticamente agradable y
+                      accesible.
                     </p>
                   </div>
                   <div className="circles-wrap">
@@ -1087,18 +1088,19 @@ function App() {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="single-service">
+                <div className="single-service ">
                   <div className="service-icon">
                     <img src={Speed} alt="" />
                   </div>
                   <div className="service-text">
-                    <h4>Optimización de Rendimiento</h4>
+                    <h4>Optimización de Velocidad</h4>
                     <p>
-                      Mejoro la velocidad y el rendimiento de sitios web
-                      aplicando estrategias avanzadas como minificación de
-                      archivos, optimización de imágenes, carga diferida y
-                      caching inteligente, asegurando tiempos de respuesta
-                      rápidos y experiencias fluidas.
+                      Enfocándome en la optimización de la velocidad del sitio,
+                      trabajo para mejorar los tiempos de carga y el rendimiento
+                      general del sitio web. Este proceso implica una serie de
+                      técnicas y estrategias, que van desde la minificación de
+                      archivos y la optimización de imágenes hasta la
+                      implementación de la carga diferida de contenido
                     </p>
                   </div>
                   <div className="circles-wrap">
@@ -1117,13 +1119,15 @@ function App() {
                     <img src={WPImg} alt="" />
                   </div>
                   <div className="service-text">
-                    <h4>Desarrollo en WordPress</h4>
+                    <h4>WordPress Development</h4>
                     <p>
-                      Desarrollo soluciones personalizadas en WordPress,
-                      incluyendo plugins, shortcodes y bloques de Gutenberg en
-                      React. Además, optimizo y gestiono sitios mediante
-                      configuraciones avanzadas de temas, plugins y
-                      personalización con Bootstrap y CSS.
+                      Como Conocedor en WordPress, ofrezco una gama de servicios
+                      que incluyen el desarrollo de plugins, la creación de
+                      shortcodes, la construcción de bloques de Gutenberg en
+                      React, y la creación y personalización de temas con CSS
+                      Bootstrap. Además, proporciono servicios de administración
+                      de WordPress que incluyen la instalación y configuración
+                      de temas y plugins.
                     </p>
                   </div>
                   <div className="circles-wrap">
@@ -1340,7 +1344,7 @@ function App() {
                 <div className="copyright">
                   <p>
                     Copyright © {new Date().getFullYear()} by{" "}
-                    <span>CODE.JSX Dev: Alex-Araujo </span> all right reserved
+                    <span>AJAVCODE Dev: Alex-Araujo </span> all right reserved
                   </p>
                 </div>
               </div>

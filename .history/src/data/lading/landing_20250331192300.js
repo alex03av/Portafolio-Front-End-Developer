@@ -13,7 +13,7 @@ export const items = [
     buttonText: "Comienza Tu Proyecto Hoy",
     buttonLink: "https://api.whatsapp.com/send?phone=584124894488",
     authorImg: "ALEX",
-    authorTitle: "Desarollo web",
+    authorTitle: "Desarrollo web",
   },
   {
     title: "En cada línea de código",
@@ -23,7 +23,7 @@ export const items = [
     buttonText: "Hablemos de Tus Ideas",
     buttonLink: "https://api.whatsapp.com/send?phone=584124894488",
     authorImg: "ALEX",
-    authorTitle: "Programacion",
+    authorTitle: "Programación",
   },
 ];
 
@@ -37,7 +37,7 @@ export const demoProjects = [
       "Desarrollo completo de sitio web en nextJS para agencia de publicidad en Murcia. Implementación de múltiples landing pages, blog corporativo y sistemas de formularios para captación de clientes. Enfocado en aumentar conversiones y generar leads para empresas que buscan incrementar sus ventas online.",
   },
   {
-    id: "3",
+    id: "2",
     url: "https://codigosdtc.com/app/",
     img: Web2,
     title: "CodigosDTC Premium - Plataforma de Mecánica Automotriz",
@@ -66,14 +66,6 @@ export const demoProjects = [
     img: Web5,
     title: "Chollitos.net - Plataforma de Ofertas y Descuentos",
     description:
-      "Lidere el desarrollo frontend de esta popular plataforma de ofertas y descuentos. Implementación de sistemas de visualización de promociones, filtrado por categorías, notificaciones de nuevas ofertas y experiencia de usuario optimizada para la rápida identificación de las mejores oportunidades de compra.",
+      "Lideré el desarrollo frontend de esta popular plataforma de ofertas y descuentos. Implementación de sistemas de visualización de promociones, filtrado por categorías, notificaciones de nuevas ofertas y experiencia de usuario optimizada para la rápida identificación de las mejores oportunidades de compra.",
   },
-  /*   {
-    id: "6",
-    url: "https://example.com/project6",
-    img: "/src/assets/img/web/sr.jfif",
-    title: "Weather App",
-    description:
-      "Real-time weather application with location-based forecasts and interactive maps.",
-  }, */
 ];

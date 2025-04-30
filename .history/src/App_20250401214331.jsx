@@ -26,7 +26,6 @@ import Web8 from "./assets/img/web/6.webp";
 import ProjectsComponent from "./components/project/ProjectsComponent";
 import Fronted from "./assets/img/algo.svg";
 import ALEX from "./assets/img/img-20211112-204253.webp";
-import ALEXyo from "./assets/img/yo.png";
 import WPImg from "./assets/img/wordpress-svgrepo-com.svg";
 import Speed from "./assets/img/speed.svg";
 import InnerBg from "./assets/img/inner-bg1.svg";
@@ -471,7 +470,7 @@ function App() {
               <div className="wlc-author-1">
                 <img
                   className="  animate__animated  animate__pulse"
-                  src={ALEXyo}
+                  src={ALEX}
                   alt="ALex Arauo"
                 />
                 <h1 className="wlc-filltext">Programacion</h1>
@@ -1041,7 +1040,7 @@ function App() {
               <div className="col-lg-5 align-self-center">
                 <div className="heading white">
                   <strong className="filltext">Mis Servicios</strong>
-                  <small>¿QUÉ PUEDO HACER?</small>
+                  <small>¿Cómo puedo ayudarte?</small>
                   <h2>
                     SERVICIOS Y <span>SOLUCIONES</span>
                   </h2>
@@ -1050,11 +1049,12 @@ function App() {
               <div className="col-lg-7 align-self-center">
                 <div className="info-content">
                   <p>
-                    Como desarrollador frontend con experiencia, me especializo
-                    en crear soluciones digitales eficientes y escalables. Mi
-                    enfoque se centra en la excelencia, asegurando interfaces
-                    optimizadas, funcionales y atractivas que ofrecen
-                    experiencias de usuario de alto nivel.
+                    Como desarrollador frontend con amplia experiencia, me
+                    especializo en la creación de interfaces modernas,
+                    optimizadas y altamente funcionales. Mi enfoque se basa en
+                    la calidad, el rendimiento y la escalabilidad, garantizando
+                    soluciones digitales que se alinean con los objetivos de
+                    cada proyecto.
                   </p>
                 </div>
               </div>
@@ -1067,13 +1067,14 @@ function App() {
                     <img src={Fronted} alt="" />
                   </div>
                   <div className="service-text">
-                    <h4>Desarrollo Front-End</h4>
+                    <h4>Desarrollo Frontend</h4>
                     <p>
-                      Diseño y desarrollo interfaces modernas y eficientes con
-                      tecnologías como React y Next.js. Desde la maquetación
-                      inicial hasta la implementación de patrones avanzados,
-                      garantizo experiencias interactivas, accesibles y
-                      visualmente atractivas.
+                      Transformo ideas en experiencias digitales atractivas y
+                      eficientes. Con un enfoque en usabilidad, accesibilidad y
+                      diseño responsive, implemento soluciones optimizadas que
+                      garantizan un rendimiento fluido en cualquier dispositivo.
+                      Mi dominio de tecnologías como React, Next.js y TypeScript
+                      me permite desarrollar aplicaciones robustas y escalables.
                     </p>
                   </div>
                   <div className="circles-wrap">
@@ -1087,18 +1088,20 @@ function App() {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="single-service">
+                <div className="single-service ">
                   <div className="service-icon">
                     <img src={Speed} alt="" />
                   </div>
                   <div className="service-text">
                     <h4>Optimización de Rendimiento</h4>
                     <p>
-                      Mejoro la velocidad y el rendimiento de sitios web
-                      aplicando estrategias avanzadas como minificación de
-                      archivos, optimización de imágenes, carga diferida y
-                      caching inteligente, asegurando tiempos de respuesta
-                      rápidos y experiencias fluidas.
+                      Un sitio rápido no solo mejora la experiencia del usuario,
+                      sino que también impacta positivamente en el SEO y la
+                      conversión. Implemento estrategias avanzadas de
+                      optimización, como reducción de carga de recursos, lazy
+                      loading, minificación de archivos, optimización de
+                      imágenes y mejores prácticas en caching para garantizar
+                      tiempos de carga mínimos y máxima eficiencia.
                     </p>
                   </div>
                   <div className="circles-wrap">
@@ -1119,11 +1122,13 @@ function App() {
                   <div className="service-text">
                     <h4>Desarrollo en WordPress</h4>
                     <p>
-                      Desarrollo soluciones personalizadas en WordPress,
-                      incluyendo plugins, shortcodes y bloques de Gutenberg en
-                      React. Además, optimizo y gestiono sitios mediante
-                      configuraciones avanzadas de temas, plugins y
-                      personalización con Bootstrap y CSS.
+                      Con experiencia en la personalización y optimización de
+                      WordPress, desarrollo soluciones a medida, desde la
+                      creación de plugins y shortcodes hasta la implementación
+                      de bloques de Gutenberg con React. También trabajo en la
+                      construcción de temas personalizados utilizando CSS y
+                      frameworks como Bootstrap, asegurando una integración
+                      perfecta entre diseño y funcionalidad.
                     </p>
                   </div>
                   <div className="circles-wrap">
@@ -1340,7 +1345,7 @@ function App() {
                 <div className="copyright">
                   <p>
                     Copyright © {new Date().getFullYear()} by{" "}
-                    <span>CODE.JSX Dev: Alex-Araujo </span> all right reserved
+                    <span>AJAVCODE Dev: Alex-Araujo </span> all right reserved
                   </p>
                 </div>
               </div>

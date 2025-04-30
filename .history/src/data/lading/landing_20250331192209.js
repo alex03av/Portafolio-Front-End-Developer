@@ -1,9 +1,4 @@
 import Web1 from "../../assets/img/web/gottabepublic.png";
-import Web2 from "../../assets/img/web/dtc.png";
-import Web3 from "../../assets/img/web/getalink.png";
-import Web4 from "../../assets/img/web/fix.png";
-import Web5 from "../../assets/img/web/chollitos.png";
-
 export const items = [
   {
     title: "La programación",
@@ -39,7 +34,7 @@ export const demoProjects = [
   {
     id: "3",
     url: "https://codigosdtc.com/app/",
-    img: Web2,
+    img: "/src/assets/img/web/dtc.png",
     title: "CodigosDTC Premium - Plataforma de Mecánica Automotriz",
     description:
       "Responsable del desarrollo frontend completo para la plataforma #1 de mecánica automotriz en español. Implementación integral de la interfaz de usuario, mantenimiento continuo y desarrollo de nuevas funcionalidades. Creación de experiencias interactivas para diagnóstico y solución de problemas automotrices mediante códigos DTC.",
@@ -47,7 +42,7 @@ export const demoProjects = [
   {
     id: "3",
     url: "https://app.getalink.com/",
-    img: Web3,
+    img: "/src/assets/img/web/getalink.png",
     title: "Getalink - Plataforma de Linkbuilding",
     description:
       "Colaboración en el desarrollo frontend de esta plataforma líder en linkbuilding. Responsable de la maquetación UI/UX, implementación de nuevas funcionalidades y mantenimiento. Interfaz optimizada para la gestión de backlinks en medios digitales, periódicos y blogs, especializada en sectores como CBD, Casino, Crypto y Apuestas.",
@@ -55,7 +50,7 @@ export const demoProjects = [
   {
     id: "4",
     url: "#",
-    img: Web4,
+    img: "/src/assets/img/web/fix.png",
     title: "FIXOBD2 - Advanced Vehicle Diagnostics",
     description:
       "Complete frontend development for a professional automotive diagnostic platform. Designed and implemented user interfaces for accessing OBD2 code solutions, technical documentation, interactive wiring diagrams, and expert support systems. Focused on creating an accessible experience for mechanics and vehicle owners worldwide.",
@@ -63,7 +58,7 @@ export const demoProjects = [
   {
     id: "5",
     url: "https://www.chollitos.net/",
-    img: Web5,
+    img: "/src/assets/img/web/chollitos.png",
     title: "Chollitos.net - Plataforma de Ofertas y Descuentos",
     description:
       "Lidere el desarrollo frontend de esta popular plataforma de ofertas y descuentos. Implementación de sistemas de visualización de promociones, filtrado por categorías, notificaciones de nuevas ofertas y experiencia de usuario optimizada para la rápida identificación de las mejores oportunidades de compra.",

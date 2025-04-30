@@ -26,7 +26,6 @@ import Web8 from "./assets/img/web/6.webp";
 import ProjectsComponent from "./components/project/ProjectsComponent";
 import Fronted from "./assets/img/algo.svg";
 import ALEX from "./assets/img/img-20211112-204253.webp";
-import ALEXyo from "./assets/img/yo.png";
 import WPImg from "./assets/img/wordpress-svgrepo-com.svg";
 import Speed from "./assets/img/speed.svg";
 import InnerBg from "./assets/img/inner-bg1.svg";
@@ -471,7 +470,7 @@ function App() {
               <div className="wlc-author-1">
                 <img
                   className="  animate__animated  animate__pulse"
-                  src={ALEXyo}
+                  src={ALEX}
                   alt="ALex Arauo"
                 />
                 <h1 className="wlc-filltext">Programacion</h1>
@@ -1340,7 +1339,7 @@ function App() {
                 <div className="copyright">
                   <p>
                     Copyright © {new Date().getFullYear()} by{" "}
-                    <span>CODE.JSX Dev: Alex-Araujo </span> all right reserved
+                    <span>AJAVCODE Dev: Alex-Araujo </span> all right reserved
                   </p>
                 </div>
               </div>
