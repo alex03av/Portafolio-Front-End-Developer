@@ -432,7 +432,7 @@ function App() {
                 </div>
               </div>
               <div className="wlc-author-1 w-100">
-                <h1 className="wlc-filltext">Programacion</h1>
+                <h1 className="wlc-filltext">Desarollo web</h1>
               </div>
             </div>
             <div className="single-welcome-area home_1">
@@ -459,8 +459,8 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="wlc-author-1 w-100">
-                <h1 className="wlc-filltext">Desarollo web</h1>
+              <div className="wlc-author-1 1000">
+                <h1 className="wlc-filltext">Programacion</h1>
               </div>
             </div>
           </OwlCarousel>

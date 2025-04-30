@@ -315,7 +315,7 @@ a.contact-btn:hover {
 }
 .wlc-author-1 {
   position: absolute;
-
+  right: 5%;
   width: 40%;
   bottom: 0;
   height: 90%;
@@ -378,10 +378,6 @@ h1.wlc-filltext {
   left: 0;
   letter-spacing: 2px;
   z-index: -1;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   -webkit-text-stroke: 1px #eeff4252;
   -webkit-text-fill-color: transparent;
 }

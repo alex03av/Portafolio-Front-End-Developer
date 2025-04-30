@@ -406,6 +406,7 @@ function App() {
             margin={10}
             items={1}
             loop
+            autoplayTimeout={10000}
           >
             <div className="single-welcome-area home_1">
               <div className="container">
@@ -418,8 +419,9 @@ function App() {
                       </h1>
                       <p className="animate__fadeInDown animate__animated ">
                         Con cada desafío superado, no solo mejoramos nuestras
-                        habilidades, sino que también dejamos nuestra huella en
-                        el mundo digital.
+                        habilidades, <br />
+                        sino que también dejamos nuestra huella en el mundo
+                        digital.
                       </p>
                       <a
                         href="https://api.whatsapp.com/send?phone=584124894488"
@@ -431,8 +433,8 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="wlc-author-1 w-100">
-                <h1 className="wlc-filltext">Programacion</h1>
+              <div className="wlc-author-1">
+                <h1 className="wlc-filltext">Desarollo web</h1>
               </div>
             </div>
             <div className="single-welcome-area home_1">
@@ -459,8 +461,8 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="wlc-author-1 w-100">
-                <h1 className="wlc-filltext">Desarollo web</h1>
+              <div className="wlc-author-1">
+                <h1 className="wlc-filltext">Programacion</h1>
               </div>
             </div>
           </OwlCarousel>

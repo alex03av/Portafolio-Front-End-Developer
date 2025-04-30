@@ -406,20 +406,22 @@ function App() {
             margin={10}
             items={1}
             loop
+            autoplayTimeout={10000}
           >
             <div className="single-welcome-area home_1">
               <div className="container">
                 <div className="row">
-                  <div className="col-lg-12">
-                    <div className="wlc-title white text-center">
+                  <div className="col-lg-7">
+                    <div className="wlc-title white">
                       <h1 className="animate__fadeInDown animate__animated ">
                         <span>La programación</span>
                         <br /> es el arte de resolver problemas
                       </h1>
                       <p className="animate__fadeInDown animate__animated ">
                         Con cada desafío superado, no solo mejoramos nuestras
-                        habilidades, sino que también dejamos nuestra huella en
-                        el mundo digital.
+                        habilidades, <br />
+                        sino que también dejamos nuestra huella en el mundo
+                        digital.
                       </p>
                       <a
                         href="https://api.whatsapp.com/send?phone=584124894488"
@@ -431,27 +433,28 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="wlc-author-1 w-100">
-                <h1 className="wlc-filltext">Programacion</h1>
+              <div className="wlc-author-1">
+                <h1 className="wlc-filltext">Desarollo web</h1>
               </div>
             </div>
             <div className="single-welcome-area home_1">
               <div className="container">
                 <div className="row">
                   <div className="col-lg-12">
-                    <div className="wlc-title white text-center">
+                    <div className="wlc-title white">
                       <h1 className="animate__fadeInDown animate__animated ">
                         <span>En cada línea de código</span> se esconde una
                         historia por contar
                       </h1>
                       <p className="animate__fadeInDown animate__animated ">
                         Nuestros sueños y aspiraciones se traducen en funciones
-                        y algoritmos, dando vida a lo que antes solo existía en
-                        nuestra imaginación.
+                        y algoritmos, <br />
+                        dando vida a lo que antes solo existía en nuestra
+                        imaginación.
                       </p>
                       <a
                         href="https://api.whatsapp.com/send?phone=584124894488"
-                        className="cbtn cbnt1 animate__fadeInDown animate__animated text-center mx-auto"
+                        className="cbtn cbnt1 animate__fadeInDown animate__animated "
                       >
                         Hablemos de Tus Ideas <FaAngleRight />
                       </a>
@@ -459,8 +462,8 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="wlc-author-1 w-100">
-                <h1 className="wlc-filltext">Desarollo web</h1>
+              <div className="wlc-author-1">
+                <h1 className="wlc-filltext">Programacion</h1>
               </div>
             </div>
           </OwlCarousel>
