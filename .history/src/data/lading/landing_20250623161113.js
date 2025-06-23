@@ -52,15 +52,14 @@ export const demoProjects = [
     title: "Getalink - Plataforma de Linkbuilding",
     description:
       "Colaboración en el desarrollo frontend de esta plataforma líder en linkbuilding. Responsable de la maquetación UI/UX, implementación de nuevas funcionalidades y mantenimiento. Interfaz optimizada para la gestión de backlinks en medios digitales, periódicos y blogs, especializada en sectores como CBD, Casino, Crypto y Apuestas.",
-  },
-  {
-    id: "8",
-    url: "https://codigosdtc.com/",
-    img: CodigosDTC,
-    title: "Códigos DTC - Sitio web a medida en WordPress",
-    description:
-      "Desarrollo completo del sitio web codigosdtc.com en WordPress 100% a medida. Implementación de un theme personalizado utilizando PHP, JavaScript, HTML, CSS, Tailwind y shortcodes. Configuración integral del sistema: páginas, blog, panel de administración, plugins específicos y funcionalidades avanzadas. Diseño y maquetación desde cero centrado en SEO y rendimiento. Enfocado en ofrecer una experiencia optimizada para usuarios que consultan códigos de diagnóstico automotriz (OBD2).",
-  },
+  }{
+  id: "8",
+  url: "https://codigosdtc.com/",
+  img: CodigosDTC,
+  title: "Códigos DTC - Sitio web a medida en WordPress",
+  description:
+    "Desarrollo completo del sitio web codigosdtc.com en WordPress 100% a medida. Implementación de un theme personalizado utilizando PHP, JavaScript, HTML, CSS, Tailwind y shortcodes. Configuración integral del sistema: páginas, blog, panel de administración, plugins específicos y funcionalidades avanzadas. Diseño y maquetación desde cero centrado en SEO y rendimiento. Enfocado en ofrecer una experiencia optimizada para usuarios que consultan códigos de diagnóstico automotriz (OBD2).",
+}
 
   {
     id: "4",
